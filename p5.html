@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record List</title>
+    <style>
+        body {
+            font: Arial, sans-serif;
+            margin: 10px;
+        }
+
+        input {
+            padding: 8px;
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: rgb(16, 149, 6);
+            color: white;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 5%;
+            
+        }
+
+        #recordList {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Student Recorde<h3>
+
+    <form id="recordForm">
+        <label for="recordInput">Name:</label>
+        <input type="text" id="recordInput">
+        <button type="button" onclick="addRecord()">Submit</button>
+    </form>
+
+    <div id="recordList"></div>
+
+    <script>
+        function addRecord()
+         {
+            var recordInput = document.getElementById("recordInput");
+            var recordValue = recordInput.value;
+
+            var newRecord = document.createElement("p");
+            newRecord.textContent = recordValue;
+
+            var recordList = document.getElementById("recordList");
+            recordList.appendChild(newRecord);
+
+            recordInput.value = '';
+        }
+    </script>
+
+</body>
+</html>
