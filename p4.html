@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>HELLO...!!</p>
+
+<p id="demo">This is my DIV element.</p>
+
+<button id="btn" onclick="myFunction()">hide Me!</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  var y = document.getElementById("btn");
+  if (x.style.display === "none") 
+  {
+    x.style.display = "block";
+    y.textContent = "Hide Me!";
+  } else 
+  {
+    x.style.display = "none";
+    y.textContent = "Show Me!";
+  }
+}
+</script>
+
+</body>
+</html>
+
